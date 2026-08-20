@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shahmeer Fitness | Fat to Fit Training</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f7f7f7;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background: #111;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #39d353;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: #111;
+            color: white;
+            gap: 40px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #39d353;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #39d353;
+            color: #111;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            width: 400px;
+            height: 450px;
+            background: #333;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* Transformation */
+        .transformation {
+            background: #111;
+            color: white;
+        }
+
+        .transformation .section-title p {
+            color: #aaa;
+        }
+
+        .transformation-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .transform-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .transform-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .transform-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0,0,0,0.75);
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .testimonial p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .testimonial h4 {
+            color: #111;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            background: #39d353;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+        }
+
+        .cta .btn {
+            background: #111;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-image {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .services,
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .transformation-images {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .transform-card img {
+                height: 400px;
+            }
+
+            .cta h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>Shahmeer Fitness</h2>
+
+        <div>
+            <a href="#services">Services</a>
+            <a href="#results">Results</a>
+            <a href="#testimonials">Testimonials</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                From <span>Fat</span> To Fit
+            </h1>
+
+            <p>
+                Hi, I'm Shahmeer, an intermediate fitness trainer.
+                I help beginners and busy individuals improve their
+                fitness, lose unwanted fat and build a stronger body.
+            </p>
+
+            <a href="#contact" class="btn">
+                Start Your Transformation
+            </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <!-- Replace this with Shahmeer's photo -->
+            <img
+                src="8ffe88e3-9193-4436-8f4c-6c4824e4e671.jpg"
+                alt="Fitness Trainer"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="services">
+
+        <div class="section-title">
+
+            <h2>How I Can Help You</h2>
+
+            <p>
+                Simple and practical fitness guidance for your goals.
+            </p>
+
+        </div>
+
+
+        <div class="services">
+
+            <div class="service-card">
+
+                <h3>Fat Loss</h3>
+
+                <p>
+                    Personalized workout guidance to help you lose
+                    unwanted body fat and improve your fitness.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>Workout Plans</h3>
+
+                <p>
+                    Simple workout routines designed around your
+                    fitness level and personal goals.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>Fitness Guidance</h3>
+
+                <p>
+                    Learn the basics of training, consistency,
+                    nutrition and building healthy habits.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Transformation -->
+    <section class="transformation" id="results">
+
+        <div class="section-title">
+
+            <h2>Real Transformation</h2>
+
+            <p>
+                See the difference consistency and proper training can make.
+            </p>
+
+        </div>
+
+
+        <div class="transformation-images">
+
+            <!-- BEFORE PHOTO -->
+            <div class="transform-card">
+
+                <img
+                    src="eaef89d0-f5cf-4a9d-9f7d-02e3be3f1be9.jpg"
+                    alt="Before transformation"
+                >
+
+                <div class="transform-label">
+                    BEFORE
+                </div>
+
+            </div>
+
+
+            <!-- AFTER PHOTO -->
+            <div class="transform-card">
+
+                <img
+                    src="68e80465-6a36-4520-875a-bfc7c617f271.jpg"
+                    alt="After transformation"
+                >
+
+                <div class="transform-label">
+                    AFTER
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+
+        <div class="section-title">
+
+            <h2>What Clients Say</h2>
+
+            <p>
+                Results are important, but so is the experience.
+            </p>
+
+        </div>
+
+
+        <div class="testimonials">
+
+            <div class="testimonial">
+
+                <p>
+                    "Shahmeer made my workouts much easier to understand.
+                    I finally started staying consistent with my training."
+                </p>
+
+                <h4>— Ahmed</h4>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <p>
+                    "The workout plan was simple and easy to follow.
+                    I feel stronger and more confident than before."
+                </p>
+
+                <h4>— Hamza</h4>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <p>
+                    "Great guidance for someone who is just getting
+                    started with fitness. Highly recommended."
+                </p>
+
+                <h4>— Usman</h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+
+        <h2>Ready To Get Started?</h2>
+
+        <p>
+            Take the first step toward a stronger and healthier you.
+        </p>
+
+        <!-- Replace # with WhatsApp link -->
+        <a href="https://wa.link/hja7ek" class="btn">
+            Contact Shahmeer
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Shahmeer Fitness. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
