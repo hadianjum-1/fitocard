@@ -1,0 +1,24 @@
+{
+  "name": "exceriseportfolio",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadianjum-1/fitocard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "types": "./script.d.ts",
+  "bugs": {
+    "url": "https://github.com/hadianjum-1/fitocard/issues"
+  },
+  "homepage": "https://github.com/hadianjum-1/fitocard#readme",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
